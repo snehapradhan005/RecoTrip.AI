@@ -71,7 +71,7 @@ pip install -r requirements.txt
 ### Run the App
 
 ```bash
-cd recotrip
+cd app
 streamlit run recotrip_app.py
 ```
 
