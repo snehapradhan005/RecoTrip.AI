@@ -65,7 +65,7 @@ The recommendation engine uses **K-Means clustering (15 clusters)** to group sim
 ### Installation
 
 ```bash
-pip install streamlit pandas scikit-learn joblib numpy
+pip install -r requirements.txt
 ```
 
 ### Run the App
