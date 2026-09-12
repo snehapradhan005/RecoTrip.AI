@@ -82,18 +82,33 @@ The app will open in your default browser at `http://localhost:8501`.
 ## Project Structure
 
 ```
-recotrip/
-├── recotrip_app.py              # Streamlit frontend + inference logic
-├── recotrip_dataset.csv         # Raw tourist destination data
-├── recotrip_places_with_clusters.csv  # Dataset with K-Means cluster assignments
-├── recotrip_kmeans_model.pkl    # Trained K-Means model
-├── recotrip_encoders.pkl        # Encoders for categorical features
-├── recotrip_season_encoder.pkl  # Season-specific encoder
-├── recotrip_age_encoder.pkl     # Age-group encoder
-├── recotrip_scaler.pkl          # Feature scaler
-├── script.py                    # Main data preprocessing pipeline
-├── script_1.py - script_4.py    # Supporting scripts for data prep
-└── README.md
+RecoTrip.AI/
+├── README.md                            # Project overview and usage guide
+├── requirements.txt                     # Python package dependencies
+├── .gitignore                           # Git exclusions
+├── BUILD_LOG.md                         # Build and debugging notes
+├── AUTONOMOUS_BUILD_PROMPT.txt          # Automation prompt placeholder
+├── app/                                 # Application and ML pipeline scripts
+│   ├── recotrip_app.py                  # Streamlit frontend + ranking logic
+│   ├── diagnose.py                      # Model/data diagnostics
+│   ├── retrain_models.py                # Retrains the K-Means model and encoders
+│   ├── script.py                        # Package/export helper
+│   ├── script_1.py                      # Data preprocessing and feature engineering
+│   ├── script_2.py                      # Legacy app mock / reference version
+│   ├── script_3.py                      # Packaging / zip logic reference
+│   ├── script_4.py                      # Supporting analysis script
+│   ├── validate_fix.py                  # Validation checks after fixes
+│   └── README.txt                       # App-specific notes
+├── data/                                # Datasets and serialized models
+│   ├── recotrip_dataset.csv             # Enriched tourist destination dataset
+│   ├── recotrip_places_with_clusters.csv # K-Means cluster assignment output
+│   ├── recotrip_kmeans_model.pkl        # Trained K-Means model
+│   ├── recotrip_encoders.pkl            # Categorical label encoders
+│   ├── recotrip_season_encoder.pkl      # Season multi-label encoder
+│   ├── recotrip_age_encoder.pkl         # Age-group multi-label encoder
+│   ├── recotrip_scaler.pkl              # StandardScaler for feature scaling
+│   └── recotrip_*.pkl                   # Additional saved model artifacts
+└── .git/                                # Git metadata
 ```
 
 ---

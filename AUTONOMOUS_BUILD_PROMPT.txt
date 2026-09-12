@@ -1,0 +1,50 @@
+You are working inside the RecoTrip.AI project.
+
+Project goal:
+Build and maintain a working travel recommendation app that suggests destinations across India using a Streamlit frontend and K-Means clustering-based recommendations.
+
+Repository context:
+- Root folder contains the project README, requirements, data folder, and app folder.
+- The main app entry point is app/recotrip_app.py.
+- The data folder contains the tourist dataset and serialized model artifacts.
+- The app relies on scikit-learn, pandas, numpy, joblib, and Streamlit.
+
+Your job:
+1. Review the project structure and identify the app entry point and dependencies.
+2. Install or confirm dependencies from requirements.txt.
+3. Check whether the app runs successfully with the current code.
+4. Fix any runtime, import, data, or model-loading issues without changing the project goal.
+5. Validate the recommendation logic with the existing scripts and data files.
+6. Keep the code clean, readable, and consistent with the current project structure.
+
+Required checks:
+- Confirm requirements are installed.
+- Run the app from the app folder:
+  streamlit run recotrip_app.py
+- If model/data issues appear, inspect the data and serialized .pkl artifacts before changing logic.
+- Verify that input filters and ML ranking still work together correctly.
+- Prefer small, targeted fixes over broad rewrites.
+
+Important project facts:
+- The app reads from data/recotrip_places_with_clusters.csv.
+- Model files are stored in the data directory and loaded at runtime.
+- User preferences include destination city, trip duration, season, group size, budget, and age group.
+- Recommendations should be filtered by user constraints and then ranked by relevant similarity/Google review score logic.
+
+Validation expectations:
+- The Streamlit app should launch without crashing.
+- Recommended destinations should respect hard filters such as budget, season, and age group.
+- The app should render results in a clear table or card layout.
+- If there are failures, produce a concise explanation and a fix.
+
+Do not:
+- Remove required project files or data without reason.
+- Change the core business logic unnecessarily.
+- Hardcode fake results instead of fixing the actual issue.
+- Ignore dependency and environment problems.
+
+Output format:
+- Briefly explain what you checked.
+- Describe the root cause if an issue existed.
+- State what fix was applied.
+- Provide the validation result and any remaining caveats.
