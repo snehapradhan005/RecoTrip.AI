@@ -120,8 +120,3 @@ These are intentional trade-offs for this project scope. Building a full-fledged
 - Handling categorical data with encoders and scalers
 - Balancing model complexity with practical usability
 
----
-
-## License
-
-MIT License — feel free to use, modify, and experiment.
